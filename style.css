@@ -1,0 +1,897 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap');
+
+
+/* ==========================================
+   RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+body {
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FF6B6B,
+            #FF3333,
+            #E62429,
+            #C91820,
+            #8B0000
+        );
+
+    color: white;
+
+}
+
+
+/* ==========================================
+   BACKGROUND BLUR
+========================================== */
+
+.bg-blur {
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: .35;
+
+    pointer-events: none;
+
+}
+
+
+.bg1 {
+
+    top: -100px;
+    left: -100px;
+
+    background: #ffaaaa;
+
+}
+
+
+.bg2 {
+
+    right: -100px;
+    bottom: -100px;
+
+    background: #7d0000;
+
+}
+
+
+/* ==========================================
+   PAGE
+========================================== */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(30px);
+
+    transition:
+        opacity .5s ease,
+        transform .5s ease,
+        visibility .5s;
+
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+}
+
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+.welcome {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.welcome h1 {
+
+    margin-top: 10px;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 48px;
+
+}
+
+
+.welcome p {
+
+    max-width: 360px;
+
+    margin: 15px auto 25px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================
+   LOTSO
+========================================== */
+
+.lotso {
+
+    width: 170px;
+
+    max-width: 55vw;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+
+}
+
+
+.lotso-big {
+
+    width: 220px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.happy {
+
+    width: 190px;
+
+}
+
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.page > p {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #c91820;
+
+    background: white;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.15);
+
+    transition:
+
+        transform .2s ease,
+
+        box-shadow .2s ease;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.2);
+
+}
+
+
+button:active {
+
+    transform: scale(.96);
+
+}
+
+
+/* ==========================================
+   HEART METER
+========================================== */
+
+.heart-meter {
+
+    width: min(360px, 90vw);
+
+    margin-bottom: 25px;
+
+}
+
+
+.meter-text {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.meter {
+
+    width: 100%;
+
+    height: 8px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.35);
+
+}
+
+
+.meter-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    border-radius: 20px;
+
+    background: white;
+
+    transition: width .8s ease;
+
+}
+
+
+.meter25 {
+
+    width: 25%;
+
+}
+
+
+.meter50 {
+
+    width: 50%;
+
+}
+
+
+.meter75 {
+
+    width: 75%;
+
+}
+
+
+.meter100 {
+
+    width: 100%;
+
+}
+
+
+/* ==========================================
+   ENVELOPE
+========================================== */
+
+.envelope-area {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.envelope-img {
+
+    width: 260px;
+
+    max-width: 75vw;
+
+    cursor: pointer;
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+.envelope-img:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.envelope-img.open {
+
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+
+}
+
+
+/* ==========================================
+   LETTER
+========================================== */
+
+.letter {
+
+    width: min(500px, 92vw);
+
+    height: min(70vh, 560px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.letter-scroll {
+
+    width: 100%;
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.12);
+
+    backdrop-filter: blur(8px);
+
+    text-align: left;
+
+    scrollbar-width: thin;
+
+}
+
+
+.letter-scroll p {
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+
+.letter .next {
+
+    margin-top: 15px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ==========================================
+   MEMORY TITLE
+========================================== */
+
+.memory-title {
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* ==========================================
+   MEMORY SLIDER
+========================================== */
+
+.memory-slider {
+
+    position: relative;
+
+    width: min(330px, 78vw);
+
+    /*
+       4 : 5 portrait
+    */
+
+    aspect-ratio: 4 / 5;
+
+    max-height: 52vh;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.12);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    touch-action: pan-y;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    cursor: grab;
+
+}
+
+
+.memory-slider:active {
+
+    cursor: grabbing;
+
+}
+
+
+/* ==========================================
+   TRACK
+========================================== */
+
+.memory-track {
+
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    transition:
+        transform .45s cubic-bezier(.25,.8,.25,1);
+
+    will-change: transform;
+
+}
+
+
+/* ==========================================
+   SINGLE SLIDE
+========================================== */
+
+.memory-slide {
+
+    flex: 0 0 100%;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================
+   PHOTO
+========================================== */
+
+.memory-slide img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    /*
+       INI YANG MEMBUAT FOTO
+       TETAP PORTRAIT DAN TEGAK
+    */
+
+    object-fit: cover;
+
+    object-position: center;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+}
+
+
+/* ==========================================
+   MEMORY DOTS
+========================================== */
+
+.memory-dots {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+
+.memory-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.45);
+
+    box-shadow: none;
+
+}
+
+
+.memory-dot:hover {
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+.memory-dot.active {
+
+    width: 22px;
+
+    border-radius: 10px;
+
+    background: white;
+
+}
+
+
+/* ==========================================
+   MEMORY CAPTION
+========================================== */
+
+.memory-caption {
+
+    font-size: 11px !important;
+
+    line-height: 1.5 !important;
+
+    margin-top: 8px !important;
+
+    margin-bottom: 10px !important;
+
+    opacity: .9;
+
+}
+
+
+/* ==========================================
+   PAGE 6
+========================================== */
+
+#page6 {
+
+    justify-content: flex-start;
+
+    padding-top: 25px;
+
+    padding-bottom: 20px;
+
+    overflow: hidden;
+
+}
+
+
+#page6 .heart-meter {
+
+    margin-bottom: 8px;
+
+    flex-shrink: 0;
+
+}
+
+
+#page6 .next {
+
+    flex-shrink: 0;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================
+   BUTTON GROUP
+========================================== */
+
+.btn-group {
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ==========================================
+   FLOATING HEART
+========================================== */
+
+.heart {
+
+    position: fixed;
+
+    top: -40px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    animation:
+        heartFall linear forwards;
+
+}
+
+
+@keyframes heartFall {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding: 20px;
+
+    }
+
+
+    .welcome h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .welcome p {
+
+        font-size: 13px;
+
+    }
+
+
+    .lotso {
+
+        width: 145px;
+
+    }
+
+
+    .lotso-big {
+
+        width: 190px;
+
+    }
+
+
+    .page > p {
+
+        font-size: 13px;
+
+    }
+
+
+    /* =========================
+       FOTO MOBILE
+    ========================= */
+
+    .memory-slider {
+
+        width: min(300px, 82vw);
+
+        aspect-ratio: 4 / 5;
+
+        max-height: 50vh;
+
+        border-radius: 20px;
+
+    }
+
+
+    .memory-title {
+
+        font-size: 30px;
+
+    }
+
+
+    .memory-caption {
+
+        font-size: 10px !important;
+
+    }
+
+
+    .letter {
+
+        height: 70vh;
+
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .memory-slider {
+
+        width: min(270px, 80vw);
+
+        max-height: 46vh;
+
+    }
+
+
+    .memory-title {
+
+        font-size: 28px;
+
+    }
+
+
+    #page6 {
+
+        padding-top: 15px;
+
+    }
+
+}
